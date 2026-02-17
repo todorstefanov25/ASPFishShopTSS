@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -17,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,27 +35,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwCIAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-17T07:50:55.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwFMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T07:50:49.326Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-17T11:55:32.462Z",
               "EditorCaption": ""
             },
             {
@@ -70,22 +53,9 @@
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABAAAAB2AAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-17T07:48:16.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-17T07:37:20.492Z",
+              "WhenOpened": "2026-02-17T11:54:42.223Z",
               "EditorCaption": ""
             },
             {
@@ -96,9 +66,22 @@
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAA7wFAAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T07:04:07.087Z",
+              "WhenOpened": "2026-02-17T11:54:27.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T11:44:38.929Z",
               "EditorCaption": ""
             }
           ]

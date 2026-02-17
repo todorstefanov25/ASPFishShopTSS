@@ -1,4 +1,5 @@
 using FishShopASP.Data;
+using FishShopASP.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,10 +18,14 @@ namespace FishShopASP
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<Client>(options => options.SignIn.RequireConfirmedAccount = false)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders(); 
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
+            app.PrepareDataBase().Wait();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

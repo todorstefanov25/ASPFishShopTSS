@@ -48,7 +48,6 @@ namespace FishShopASP.Areas.Identity.Pages.Account
         {
             
             [Required]
-            [EmailAddress]
             public string UserName { get; set; }
 
            

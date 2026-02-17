@@ -61,8 +61,6 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\css\site.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\favicon.ico
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.slim.min.js
@@ -123,3 +121,5 @@ C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroo
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\js\site.js
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\favicon.ico
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\css\site.css
