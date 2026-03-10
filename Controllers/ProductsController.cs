@@ -56,10 +56,11 @@ namespace FishShopASP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CatalogNumber,Name,Price,CategoryId,Description,imageURL,RegOn")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,CatalogNumber,Name,Price,CategoryId,Description,imageURL")] Product product)
         {
             if (ModelState.IsValid)
             {
+                product.RegOn = DateTime.Now;
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -90,7 +91,7 @@ namespace FishShopASP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CatalogNumber,Name,Price,CategoryId,Description,imageURL,RegOn")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CatalogNumber,Name,Price,CategoryId,Description,imageURL")] Product product)
         {
             if (id != product.Id)
             {

@@ -98,7 +98,6 @@ C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\De
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Composition.Runtime.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Composition.TypedParts.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Formats.Asn1.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Memory.Data.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Reflection.MetadataLoadContext.dll
@@ -106,7 +105,6 @@ C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\De
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Runtime.Caching.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Security.Permissions.dll
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Text.Json.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\System.Windows.Extensions.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\af\Humanizer.resources.dll
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\bin\Debug\net9.0\ar\Humanizer.resources.dll
@@ -439,3 +437,7 @@ C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\De
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\FishShopASP.pdb
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\FishShopASP.genruntimeconfig.cache
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\ref\FishShopASP.dll
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
