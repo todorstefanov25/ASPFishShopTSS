@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FishShopASP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+278d59f30b32ccf8eb51521199095d7df8de9dbd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f376b43d0245de9bc2e6f3ef753282b2a8cea88")]
 [assembly: System.Reflection.AssemblyProductAttribute("FishShopASP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FishShopASP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

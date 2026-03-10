@@ -1,71 +1,83 @@
 ﻿@model IEnumerable<FishShopASP.Data.Product>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Продукти";
 }
 
-<h1>Index</h1>
+<div class="page-head">
+    <div class="d-flex align-items-start justify-content-between gap-3 flex-wrap">
+        <div>
+            <h1 class="h3 fw-bold mb-1">Продукти</h1>
+            <div class="text-muted">Управлявай каталога си бързо и удобно.</div>
+        </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CatalogNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categories)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.imageURL)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RegOn)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CatalogNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categories.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.imageURL)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RegOn)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <div class="d-flex gap-2">
+            <a asp-action="Create" class="btn btn-primary btn-lg px-4">
+                + Нов продукт
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="products-grid mt-3">
+    @foreach (var item in Model)
+    {
+        <div class="product-card">
+            <div class="product-body">
+                <div class="d-flex justify-content-between align-items-start gap-3">
+                    <div class="min-w-0">
+                        <div class="product-title-row">
+                            @if (!string.IsNullOrWhiteSpace(item.imageURL))
+                            {
+                                <img class="product-mini" src="@item.imageURL" alt="@item.Name" width="200" height="200"/>
+                            }
+                            else
+                            {
+                                <span class="product-mini product-mini-placeholder">🐟</span>
+                            }
+
+                            <div class="product-title text-truncate">@item.Name</div>
+                        </div>
+
+                        <div class="product-sub text-muted">
+                            Каталог №: <span class="fw-semibold">@item.CatalogNumber</span>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        @item.Price €
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between mt-3 gap-2 flex-wrap">
+                    <span class="badge rounded-pill text-bg-light border">
+                        @item.Categories?.Name
+                    </span>
+
+                    <small class="text-muted">
+                        @item.RegOn.ToString("dd.MM.yyyy")
+                    </small>
+                </div>
+
+                @if (!string.IsNullOrWhiteSpace(item.Description))
+                {
+                    <div class="product-desc mt-3">
+                        @item.Description
+                    </div>
+                }
+
+                <div class="product-actions mt-3">
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary">
+                        Детайли
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary">
+                        Редакция
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
+                        Изтрий
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

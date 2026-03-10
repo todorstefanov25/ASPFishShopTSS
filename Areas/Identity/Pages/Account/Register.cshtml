@@ -1,93 +1,150 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Регистрация";
 }
 
-<h1>@ViewData["Title"]</h1>
-
-<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
-            <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-
-            <div class="form-floating mb-3">
-                <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true"  />
-                <label asp-for="Input.UserName">UserName</label>
-                <span asp-validation-for="Input.UserName" class="text-danger"></span>
-            </div>
-
-            <div class="form-floating mb-3">
-                <input asp-for="Input.FirstName" class="form-control" autocomplete="username" aria-required="true"  />
-                <label asp-for="Input.FirstName">FirstName</label>
-                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
-            </div>
-
-            <div class="form-floating mb-3">
-                <input asp-for="Input.LastName" class="form-control" autocomplete="username" aria-required="true" />
-                <label asp-for="Input.LastName">LastName</label>
-                <span asp-validation-for="Input.LastName" class="text-danger"></span>
-            </div>
-
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Phone" class="form-control" autocomplete="username" aria-required="true" />
-                <label asp-for="Input.Phone">Phone</label>
-                <span asp-validation-for="Input.Phone" class="text-danger"></span>
-            </div>
-
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">Email</label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
-
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Password</label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
-        </form>
+<div class="auth2">
+    <div class="auth2-bg" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+        <span class="grid"></span>
     </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-9 col-xl-7">
+                <div class="auth2-card shadow-soft">
+                    <div class="auth2-header">
+                        <div class="brand">
+                            <div class="brand-icon">🐟</div>
+                            <div>
+                                <div class="brand-name">FishShopASP</div>
+                                <div class="brand-sub">Създай нов профил</div>
+                            </div>
                         </div>
-                    </form>
-                }
-            }
-        </section>
+
+                        <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl"
+                           class="btn btn-sm btn-outline-secondary auth2-pill">
+                            Имам акаунт
+                        </a>
+                    </div>
+
+                    <div class="auth2-body">
+                        <h1 class="h3 fw-bold mb-1">Регистрация </h1>
+                        <p class="text-muted mb-4">Попълни данните си и създай профил.</p>
+
+                        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="vstack gap-3">
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 mb-0 alert-validation" role="alert"></div>
+
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input asp-for="Input.UserName" class="form-control auth2-input"
+                                               autocomplete="username" aria-required="true" placeholder="username" />
+                                        <label asp-for="Input.UserName">Потребителско име</label>
+                                        <span asp-validation-for="Input.UserName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating">
+                                        <input asp-for="Input.FirstName" class="form-control auth2-input"
+                                               aria-required="true" placeholder="first name" />
+                                        <label asp-for="Input.FirstName">Име</label>
+                                        <span asp-validation-for="Input.FirstName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating">
+                                        <input asp-for="Input.LastName" class="form-control auth2-input"
+                                               aria-required="true" placeholder="last name" />
+                                        <label asp-for="Input.LastName">Фамилия</label>
+                                        <span asp-validation-for="Input.LastName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating">
+                                        <input asp-for="Input.Phone" class="form-control auth2-input"
+                                               aria-required="true" placeholder="phone" />
+                                        <label asp-for="Input.Phone">Телефон</label>
+                                        <span asp-validation-for="Input.Phone" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating">
+                                        <input asp-for="Input.Email" class="form-control auth2-input"
+                                               autocomplete="email" aria-required="true" placeholder="name@example.com" />
+                                        <label asp-for="Input.Email">Имейл</label>
+                                        <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating auth2-password">
+                                        <input asp-for="Input.Password" class="form-control auth2-input"
+                                               autocomplete="new-password" aria-required="true" placeholder="password"
+                                               id="regPassword" />
+                                        <label asp-for="Input.Password">Парола</label>
+
+                                        <button type="button" class="auth2-eye"
+                                                aria-label="Покажи/скрий паролата"
+                                                onclick="toggleRegPassword()">
+                                            <span id="regEyeText">Покажи</span>
+                                        </button>
+
+                                        <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating">
+                                        <input asp-for="Input.ConfirmPassword" class="form-control auth2-input"
+                                               autocomplete="new-password" aria-required="true" placeholder="password"
+                                               id="regConfirmPassword" />
+                                        <label asp-for="Input.ConfirmPassword">Потвърди парола</label>
+                                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger small"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="registerSubmit" type="submit" class="btn btn-primary btn-lg w-100 auth2-primary">
+                                Създай профил
+                            </button>
+
+                            <div class="auth2-footer text-center small text-muted pt-2">
+                                Вече имаш профил?
+                                <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl"
+                                   class="link-primary text-decoration-none fw-semibold">
+                                    Вход
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="auth2-note text-center mt-3 text-muted small">
+                    © 2026 FishShopASP • Secure signup
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        function toggleRegPassword() {
+            const p = document.getElementById('regPassword');
+            const t = document.getElementById('regEyeText');
+            const isHidden = p.type === 'password';
+            p.type = isHidden ? 'text' : 'password';
+            t.textContent = isHidden ? 'Скрий' : 'Покажи';
+        }
+    </script>
 }

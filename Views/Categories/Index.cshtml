@@ -1,35 +1,52 @@
 ﻿@model IEnumerable<FishShopASP.Data.Category>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Категории";
 }
 
-<h1>Index</h1>
+<div class="page-head">
+    <div class="d-flex align-items-start justify-content-between gap-3 flex-wrap">
+        <div>
+            <h1 class="h3 fw-bold mb-1">Категории</h1>
+            <div class="text-muted">Създавай и управлявай категориите в магазина.</div>
+        </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <div class="d-flex gap-2">
+            <a asp-action="Create" class="btn btn-primary btn-lg px-4">
+                + Нова категория
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="categories-grid mt-3">
+    @foreach (var item in Model)
+    {
+        <div class="category-card">
+            <div class="category-body">
+                <div class="d-flex align-items-start justify-content-between gap-3">
+                    <div class="min-w-0">
+                        <div class="category-title text-truncate">@item.Name</div>
+                        <div class="category-sub text-muted">ID: <span class="fw-semibold">@item.Id</span></div>
+                    </div>
+
+                    <span class="badge rounded-pill text-bg-light border category-badge">
+                        Категория
+                    </span>
+                </div>
+
+                <div class="category-actions mt-3">
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary">
+                        Детайли
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary">
+                        Редакция
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
+                        Изтрий
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

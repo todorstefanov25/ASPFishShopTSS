@@ -1,83 +1,125 @@
 ﻿@page
 @model LoginModel
-
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Вход";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
-        <section>
-            <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
-                <hr />
-                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true"  />
-                    <label asp-for="Input.UserName" class="form-label">UserName</label>
-                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
-                </div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Password</label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="checkbox mb-3">
-                    <label asp-for="Input.RememberMe" class="form-label">
-                        <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
-                </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                </div>
-                <div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                    </p>
-                </div>
-            </form>
-        </section>
+<div class="auth2">
+    <div class="auth2-bg" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+        <span class="grid"></span>
     </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to log in.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                <div class="auth2-card shadow-soft">
+                    <div class="auth2-header">
+                        <div class="brand">
+                            <div class="brand-icon">🐟</div>
+                            <div>
+                                <div class="brand-name">FishShopASP</div>
+                                <div class="brand-sub">Влез в профила си</div>
+                            </div>
                         </div>
-                    </form>
-                }
-            }
-        </section>
+
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"
+                           class="btn btn-sm btn-outline-secondary auth2-pill">
+                            Регистрация
+                        </a>
+                    </div>
+
+                    <div class="auth2-body">
+                        <h1 class="h3 fw-bold mb-1">Добре дошъл 👋</h1>
+                        <p class="text-muted mb-4">Въведи данните си, за да продължиш.</p>
+
+                        <form id="account" method="post" class="vstack gap-3">
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 mb-0" role="alert"></div>
+
+                            <div class="form-floating">
+                                <input asp-for="Input.UserName"
+                                       class="form-control auth2-input"
+                                       autocomplete="username"
+                                       aria-required="true"
+                                       placeholder="username" />
+                                <label asp-for="Input.UserName">Потребителско име</label>
+                                <span asp-validation-for="Input.UserName" class="text-danger small"></span>
+                            </div>
+
+                            <div class="form-floating auth2-password">
+                                <input asp-for="Input.Password"
+                                       class="form-control auth2-input"
+                                       autocomplete="current-password"
+                                       aria-required="true"
+                                       placeholder="password"
+                                       id="passwordInput" />
+                                <label asp-for="Input.Password">Парола</label>
+
+                                <button type="button"
+                                        class="auth2-eye"
+                                        aria-label="Покажи/скрий паролата"
+                                        onclick="togglePassword()">
+                                    <span id="eyeText">Покажи</span>
+                                </button>
+
+                                <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div class="form-check form-switch m-0">
+                                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                                    <label class="form-check-label" asp-for="Input.RememberMe">
+                                        Запомни ме
+                                    </label>
+                                </div>
+
+                                <a id="forgot-password"
+                                   asp-page="./ForgotPassword"
+                                   class="link-primary text-decoration-none fw-semibold">
+                                    Забравена парола?
+                                </a>
+                            </div>
+
+                            <button id="login-submit" type="submit" class="btn btn-primary btn-lg w-100 auth2-primary">
+                                Вход
+                            </button>
+
+                            <div class="auth2-footer text-center small text-muted pt-2">
+                                Нямаш акаунт?
+                                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"
+                                   class="link-primary text-decoration-none fw-semibold">
+                                    Регистрирай се
+                                </a>
+                                <span class="mx-2">•</span>
+                                <a id="resend-confirmation" asp-page="./ResendEmailConfirmation"
+                                   class="link-primary text-decoration-none">
+                                    Препрати потвърждение
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="auth2-note text-center mt-3 text-muted small">
+                    © 2026 FishShopASP • Secure login
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        function togglePassword() {
+            const input = document.getElementById('passwordInput');
+            const text = document.getElementById('eyeText');
+            const isHidden = input.type === 'password';
+            input.type = isHidden ? 'text' : 'password';
+            text.textContent = isHidden ? 'Скрий' : 'Покажи';
+        }
+    </script>
 }

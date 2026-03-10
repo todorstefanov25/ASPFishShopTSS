@@ -11,39 +11,39 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FishShopASP</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-sm navbar-dark nav-pro sticky-top">
+            <div class="container-fluid px-3 px-lg-4">
+                <a class="navbar-brand nav-brand d-flex align-items-center gap-2"
+                   asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="nav-logo">🐟</span>
+                    <span>FishShopASP</span>
+                </a>
+
+                <button class="navbar-toggler nav-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0 gap-sm-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Начало</a>
+                            <a class="nav-link nav-link-pro" asp-controller="Home" asp-action="Index">Начало</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link nav-link-pro" asp-controller="Categories" asp-action="Index">Категории</a>
                         </li>
-
-
-
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Категории</a>
+                            <a class="nav-link nav-link-pro" asp-controller="Products" asp-action="Index">Продукти</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Продукти</a>
+                            <a class="nav-link nav-link-pro" asp-controller="Home" asp-action="Contacts">Контакти</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacts">Контакти</a>
-                        </li>
-
                     </ul>
-                    <partial name="_LoginPartial" />
+
+                    <div class="d-flex align-items-center gap-2">
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
             </div>
         </nav>
