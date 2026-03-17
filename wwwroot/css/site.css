@@ -37,7 +37,7 @@ main {
     display: none;
 }
 
-/* ---------- AUTH (Login/Register) ---------- */
+
 .auth2 {
     position: relative;
     min-height: 100vh;
@@ -262,6 +262,7 @@ main {
     overflow: hidden;
     position: relative;
     transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+
 }
 
     .product-card::before, .category-card::before {
@@ -323,6 +324,9 @@ main {
 }
 
 .product-price {
+    position: absolute;
+    top: 12px;
+    right: 12px;
     font-weight: 900;
     font-size: 1.05rem;
     padding: .35rem .7rem;
@@ -332,6 +336,7 @@ main {
     color: #fff;
     white-space: nowrap;
     box-shadow: 0 12px 26px rgba(11,42,74,.18);
+    z-index: 2;
 }
 
 .badge.text-bg-light.border {
@@ -448,4 +453,83 @@ main {
 .nav-toggler {
     border: 1px solid rgba(255,255,255,.22) !important;
     border-radius: 14px;
+}
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fbfd;
+    color: #1f2937;
+}
+
+.hero-section {
+    min-height: 85vh;
+    background: linear-gradient(rgba(0, 60, 90, 0.65), rgba(0, 90, 120, 0.65)), url('https://i.pinimg.com/736x/44/c4/b2/44c4b2bddaf2d657c78e155eb5d0039e.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+}
+
+    .hero-section h1 {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-section p {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .custom-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+    }
+
+.promo-section {
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+    color: white;
+}
+
+.btn-warning {
+    color: #1b1b1b;
+}
+
+.site-footer {
+    background: #0b2239;
+    color: #ffffff;
+    padding: 50px 0 20px;
+    margin-top: 0;
+}
+
+    .site-footer h5 {
+        margin-bottom: 20px;
+        color: #f8d24a;
+    }
+
+    .site-footer p,
+    .site-footer li {
+        color: #d6e4f0;
+    }
+
+    .site-footer a {
+        color: #d6e4f0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .site-footer a:hover {
+            color: #f8d24a;
+        }
+
+.footer-line {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 20px 0;
 }

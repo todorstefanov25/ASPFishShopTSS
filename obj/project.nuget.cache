@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UMRLIRrZXmA=",
+  "dgSpecHash": "fiKJ8MWPyfE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\FishShopASP.csproj",
+  "projectFilePath": "C:\\Users\\STUDENTS-1212-14\\Downloads\\ASPFishShopTSS-main\\ASPFishShopTSS-main\\FishShopASP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\STUDENTS-1212-14\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\STUDENTS-1212-14\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

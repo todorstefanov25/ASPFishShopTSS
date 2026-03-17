@@ -1,8 +1,102 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Риболовен майстор";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="hero-section text-white d-flex align-items-center">
+    <div class="container text-center">
+        <h1 class="display-3 fw-bold mb-3">Риболовен майстор</h1>
+        <p class="lead mb-4">
+            Всичко необходимо за успешен риболов – въдици, макари, примамки и аксесоари
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="btn btn-warning btn-lg px-4 fw-bold">Разгледай продукти</a>
+            <a href="#" class="btn btn-outline-light btn-lg px-4">Промоции</a>
+        </div>
+    </div>
 </div>
+
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Популярни категории</h2>
+        <p class="text-muted">Избери категория и намери най-добрата екипировка за твоя риболов</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow border-0 rounded-4 custom-card">
+                <div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3">🎣</div>
+                    <h4 class="fw-bold">Въдици</h4>
+                    <p class="text-muted">Широк избор от въдици за начинаещи и професионалисти.</p>
+                    <a href="#" class="btn btn-outline-primary">Виж повече</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow border-0 rounded-4 custom-card">
+                <div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3">🧵</div>
+                    <h4 class="fw-bold">Корди и влакна</h4>
+                    <p class="text-muted">Здрави и надеждни влакна за всякакъв вид риболов.</p>
+                    <a href="#" class="btn btn-outline-primary">Виж повече</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow border-0 rounded-4 custom-card">
+                <div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3">🐟</div>
+                    <h4 class="fw-bold">Примамки</h4>
+                    <p class="text-muted">Изкуствени и естествени примамки за по-добър улов.</p>
+                    <a href="#" class="btn btn-outline-primary">Виж повече</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="promo-section py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-3">Специални оферти тази седмица</h2>
+        <p class="mb-4">Възползвай се от намаления до 30% на избрани продукти.</p>
+        <a href="#" class="btn btn-danger btn-lg px-4">Виж офертите</a>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Риболовен майстор</h5>
+                <p>
+                    Онлайн магазин за качествени риболовни принадлежности, аксесоари и оборудване.
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Полезни връзки</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Начало</a></li>
+                    <li><a href="#">Продукти</a></li>
+                    <li><a href="#">Промоции</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Контакти</h5>
+                <p class="mb-1">📍 гр. Сопот, България</p>
+                <p class="mb-1">📞 +359 888 352 906</p>
+                <p class="mb-1">✉ info@ribolovenmaistor.bg</p>
+            </div>
+        </div>
+
+        <hr class="footer-line" />
+
+        <div class="text-center">
+            <p class="mb-0">&copy; @DateTime.Now.Year - Риболовен майстор. Всички права запазени.</p>
+        </div>
+    </div>
+</footer>
