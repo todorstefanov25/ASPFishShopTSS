@@ -363,7 +363,6 @@ C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\De
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\c3jxur1t3w-61n19gt1b8.gz
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\bym9e880qw-xtxxf3hu2r.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\uk4dt0sxqq-bqjiyaj88i.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\9jerbzugtn-c2jlpeoesf.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\gpxb5f36xf-erw9l3u2r3.gz
@@ -410,19 +409,14 @@ C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\De
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\kxw0ba79rj-0j3bgjxly4.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\gym09uv8xs-47otxtyo56.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\x4yiq2mun1-4v8eqarkd7.gz
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\uueozylsw0-356vix0kms.gz
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\x4kf0mmq2r-83jwlth58m.gz
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\y67c81mr93-mrlpezrjn3.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\b1nbks5ugy-lzl9nlhx6b.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\cxjb7kv3ju-ag7o75518u.gz
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\3uhdh7pr8x-x0q3zqp4vz.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\rannleoj7u-0i3buxo5is.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\tsaem45rd4-o1o13a6vjx.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\zvzn74jfjm-ttgo8qnofa.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\qutkympwe7-2z0ns9nrw6.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\h4qjncf619-muycvpuwrr.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\k7cn50rhte-87fc7y1x7t.gz
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\la3j1cq7iv-mlv21k5csn.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\qvkpkjbrqk-cwlomkuplz.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\nm2oq06a8z-cwlomkuplz.gz
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\staticwebassets.build.json
@@ -440,7 +434,6 @@ C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\De
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\7gulhvb7z8-3eh6eokm1i.gz
 C:\Users\STUDENTS-1212-14\Downloads\ASPFishShopTSS-main\ASPFishShopTSS-main\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\STUDENTS-1212-14\Downloads\ASPFishShopTSS-main\ASPFishShopTSS-main\bin\Debug\net9.0\appsettings.json
 C:\Users\STUDENTS-1212-14\Downloads\ASPFishShopTSS-main\ASPFishShopTSS-main\bin\Debug\net9.0\FishShopASP.staticwebassets.runtime.json
@@ -883,3 +876,10 @@ C:\Users\STUDENTS-1212-14\Downloads\ASPFishShopTSS-main\ASPFishShopTSS-main\obj\
 C:\Users\STUDENTS-1212-14\Downloads\ASPFishShopTSS-main\ASPFishShopTSS-main\obj\Debug\net9.0\FishShopASP.genruntimeconfig.cache
 C:\Users\STUDENTS-1212-14\Downloads\ASPFishShopTSS-main\ASPFishShopTSS-main\obj\Debug\net9.0\ref\FishShopASP.dll
 C:\Users\STUDENTS-1212-14\Downloads\ASPFishShopTSS-main\ASPFishShopTSS-main\obj\Debug\net9.0\compressed\7gulhvb7z8-kni5ne2wd3.gz
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\7gulhvb7z8-kni5ne2wd3.gz
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\bym9e880qw-fr7q2aak1r.gz
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\uueozylsw0-l3n5xuwxn8.gz
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\x4kf0mmq2r-ilo7uva0vt.gz
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\y67c81mr93-qlccset4i1.gz
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\3uhdh7pr8x-xzw0cte36n.gz
+C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\obj\Debug\net9.0\compressed\la3j1cq7iv-jfsiqqwiad.gz

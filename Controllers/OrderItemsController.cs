@@ -23,14 +23,23 @@ namespace FishShopASP.Controllers
             _userManager = userManager;
         }
 
-        // GET: OrderItems
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.OrderItems.Include(o => o.Clients).Include(o => o.Products);
-            return View(await applicationDbContext.ToListAsync());
+            IQueryable<OrderItem> query = _context.OrderItems;
+
+            if (!User.IsInRole("Admin"))
+            {
+                var userId = _userManager.GetUserId(User);
+                query = query.Where(o => o.ClientId == userId);
+            }
+
+            query = query
+                .Include(o => o.Clients)
+                .Include(o => o.Products);
+
+            return View(await query.ToListAsync());
         }
 
-        // GET: OrderItems/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -42,35 +51,35 @@ namespace FishShopASP.Controllers
                 .Include(o => o.Clients)
                 .Include(o => o.Products)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (orderItem == null)
             {
                 return NotFound();
             }
 
+            if (!User.IsInRole("Admin") && orderItem.ClientId != _userManager.GetUserId(User))
+            {
+                return Forbid();
+            }
+
             return View(orderItem);
         }
 
-        // GET: OrderItems/Create
         public IActionResult Create()
         {
-           // ViewData["ClientId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name");
             return View();
         }
 
-        // POST: OrderItems/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,Quantity")] OrderItem orderItem)
         {
-
-            orderItem.ClientId =_userManager.GetUserId(User); 
+            orderItem.ClientId = _userManager.GetUserId(User);
             orderItem.RegOn = DateTime.Now;
+
             ModelState.Remove("ClientId");
             ModelState.Remove("RegOn");
-
 
             if (ModelState.IsValid)
             {
@@ -83,7 +92,7 @@ namespace FishShopASP.Controllers
             return View(orderItem);
         }
 
-        // GET: OrderItems/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -96,16 +105,14 @@ namespace FishShopASP.Controllers
             {
                 return NotFound();
             }
-           // ViewData["ClientId"] = new SelectList(_context.Users, "Id", "Id", orderItem.ClientId);
+
             ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name", orderItem.ProductId);
             return View(orderItem);
         }
 
-        // POST: OrderItems/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ClientId,ProductId,Quantity,RegOn")] OrderItem orderItem)
         {
             if (id != orderItem.Id)
@@ -131,14 +138,15 @@ namespace FishShopASP.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
-          //  ViewData["ClientId"] = new SelectList(_context.Users, "Id", "Id", orderItem.ClientId);
+
             ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name", orderItem.ProductId);
             return View(orderItem);
         }
 
-        // GET: OrderItems/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -150,6 +158,7 @@ namespace FishShopASP.Controllers
                 .Include(o => o.Clients)
                 .Include(o => o.Products)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (orderItem == null)
             {
                 return NotFound();
@@ -158,9 +167,9 @@ namespace FishShopASP.Controllers
             return View(orderItem);
         }
 
-        // POST: OrderItems/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var orderItem = await _context.OrderItems.FindAsync(id);

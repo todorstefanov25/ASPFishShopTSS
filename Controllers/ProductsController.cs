@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FishShopASP.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FishShopASP.Controllers
 {
@@ -18,14 +19,12 @@ namespace FishShopASP.Controllers
             _context = context;
         }
 
-        // GET: Products
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Products.Include(p => p.Categories);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,6 +35,7 @@ namespace FishShopASP.Controllers
             var product = await _context.Products
                 .Include(p => p.Categories)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (product == null)
             {
                 return NotFound();
@@ -44,18 +44,16 @@ namespace FishShopASP.Controllers
             return View(product);
         }
 
-        // GET: Products/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
             return View();
         }
 
-        // POST: Products/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,CatalogNumber,Name,Price,CategoryId,Description,imageURL")] Product product)
         {
             if (ModelState.IsValid)
@@ -65,11 +63,12 @@ namespace FishShopASP.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", product.CategoryId);
             return View(product);
         }
 
-        // GET: Products/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -82,15 +81,14 @@ namespace FishShopASP.Controllers
             {
                 return NotFound();
             }
+
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", product.CategoryId);
             return View(product);
         }
 
-        // POST: Products/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,CatalogNumber,Name,Price,CategoryId,Description,imageURL")] Product product)
         {
             if (id != product.Id)
@@ -116,13 +114,15 @@ namespace FishShopASP.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", product.CategoryId);
             return View(product);
         }
 
-        // GET: Products/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,6 +133,7 @@ namespace FishShopASP.Controllers
             var product = await _context.Products
                 .Include(p => p.Categories)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (product == null)
             {
                 return NotFound();
@@ -141,9 +142,9 @@ namespace FishShopASP.Controllers
             return View(product);
         }
 
-        // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var product = await _context.Products.FindAsync(id);
