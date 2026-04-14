@@ -285,6 +285,10 @@ main {
     min-width: 0;
 }
 
+.btn-success {
+    color: var(--navy) !important;
+}
+
 .product-title, .category-title {
     color: var(--navy);
     font-weight: 850;
@@ -497,6 +501,7 @@ body {
     background: linear-gradient(90deg, #0d6efd, #0dcaf0);
     color: white;
 }
+
 
 .btn-warning {
     color: #1b1b1b;

@@ -65,15 +65,16 @@
                 }
 
                 <div class="product-actions mt-auto">
-
-                    <a href="#" class="btn btn-success">
-                        🛒 Купи
-                    </a>
-
+                    <form asp-controller="OrderItems" asp-action="AddToCart" method="post">
+                        <input type="hidden" name="productId" value="@item.Id" />
+                        <input type="hidden" name="quantity" value="1" />
+                        <button type="submit" class="btn btn-success">🛒 Купи</button>
+                    </form>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary">
                         Детайли
                     </a>
-
+                    @if(User.IsInRole("Admin"))
+                    {
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary">
                         Редакция
                     </a>
@@ -81,7 +82,7 @@
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
                         Изтрий
                     </a>
-
+                    }
                 </div>
             </div>
         </div>

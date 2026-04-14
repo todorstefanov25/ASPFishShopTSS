@@ -1,0 +1,66 @@
+﻿@model IEnumerable<FishShopASP.Data.OrderItem>
+
+@{
+    ViewData["Title"] = "Моите поръчки";
+    var total = Model.Sum(x => x.Products.Price * x.Quantity);
+}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div>
+            <h1 class="fw-bold mb-1">Моите поръчки</h1>
+            <p class="text-muted mb-0">Тук са завършените поръчки</p>
+        </div>
+
+        <a asp-action="Index" class="btn btn-outline-dark rounded-pill px-4">
+            Обратно към количката
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success rounded-4 shadow-sm border-0 mb-4">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="card border-0 shadow-sm rounded-4 p-5 text-center">
+            <h3 class="fw-semibold mb-3">Нямате поръчки</h3>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h4 class="fw-bold mb-0">@item.Products.Name</h4>
+                                <span class="badge bg-success rounded-pill px-3 py-2">Поръчано</span>
+                            </div>
+
+                            <div class="mb-2">
+                                <span class="text-muted">Количество:</span>
+                                <strong>@item.Quantity</strong>
+                            </div>
+
+                            <div class="mb-2">
+                                <span class="text-muted">Дата:</span>
+                                <strong>@item.RegOn.ToString("dd.MM.yyyy HH:mm")</strong>
+                            </div>
+
+                            <div>
+                                <span class="text-muted">Общо:</span>
+                                <strong>@((item.Products.Price * item.Quantity).ToString("0.00")) лв.</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

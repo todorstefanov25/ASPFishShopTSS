@@ -1,53 +1,89 @@
 ﻿@model IEnumerable<FishShopASP.Data.OrderItem>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Количка";
+    var total = Model.Sum(x => x.Products.Price * x.Quantity);
 }
 
-<h1>Index</h1>
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div>
+            <h1 class="fw-bold mb-1">Моята количка</h1>
+            <p class="text-muted mb-0">Прегледай продуктите преди да завършиш поръчката</p>
+        </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Clients)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Products)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RegOn)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Clients.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Products.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RegOn)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <div class="d-flex gap-2">
+            <a asp-action="MyOrders" class="btn btn-outline-dark rounded-pill px-4">
+                Моите поръчки
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success rounded-4 shadow-sm border-0 mb-4">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="card border-0 shadow-sm rounded-4 p-5 text-center">
+            <h3 class="fw-semibold mb-3">Количката е празна</h3>
+            <p class="text-muted mb-4">Добави продукти, за да направиш поръчка</p>
+            <a asp-controller="Products" asp-action="Index" class="btn btn-dark rounded-pill px-4">
+                Разгледай продуктите
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            <div class="col-lg-8">
+                @foreach (var item in Model)
+                {
+                    <div class="card border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                                <div>
+                                    <h4 class="fw-bold mb-1">@item.Products.Name</h4>
+                                    <div class="text-muted mb-2">Добавено на: @item.RegOn.ToString("dd.MM.yyyy HH:mm")</div>
+                                    <div class="fs-6">Количество: <span class="fw-semibold">@item.Quantity</span></div>
+                                </div>
+
+                                <div class="text-end">
+                                    <div class="text-muted small">Единична цена</div>
+                                    <div class="fw-semibold fs-5">@item.Products.Price.ToString("0.00") лв.</div>
+                                    <div class="text-muted small mt-2">Общо</div>
+                                    <div class="fw-bold fs-4">@((item.Products.Price * item.Quantity).ToString("0.00")) лв.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card border-0 shadow rounded-4 p-4 sticky-top" style="top: 100px;">
+                    <h3 class="fw-bold mb-4">Обобщение</h3>
+
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="text-muted">Продукти</span>
+                        <span class="fw-semibold">@Model.Count()</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-4">
+                        <span class="text-muted">Крайна сума</span>
+                        <span class="fw-bold fs-4">@total.ToString("0.00") лв.</span>
+                    </div>
+
+                    <form asp-action="CompleteOrder" method="post">
+                        <button type="submit" class="btn btn-dark w-100 rounded-pill py-3 fw-semibold">
+                            Завърши поръчката
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

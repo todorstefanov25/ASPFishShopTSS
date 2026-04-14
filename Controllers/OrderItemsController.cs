@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using FishShopASP.Data;
+﻿using FishShopASP.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FishShopASP.Controllers
 {
     [Authorize]
     public class OrderItemsController : Controller
     {
-        private readonly UserManager<Client> _userManager;
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<Client> _userManager;
 
-        public OrderItemsController(ApplicationDbContext context,UserManager<Client> userManager)
+        private static readonly Dictionary<string, List<OrderItem>> _savedOrders = new();
+
+        public OrderItemsController(ApplicationDbContext context, UserManager<Client> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -25,166 +22,119 @@ namespace FishShopASP.Controllers
 
         public async Task<IActionResult> Index()
         {
-            IQueryable<OrderItem> query = _context.OrderItems;
+            var user = await _userManager.GetUserAsync(User);
 
-            if (!User.IsInRole("Admin"))
-            {
-                var userId = _userManager.GetUserId(User);
-                query = query.Where(o => o.ClientId == userId);
-            }
-
-            query = query
-                .Include(o => o.Clients)
-                .Include(o => o.Products);
-
-            return View(await query.ToListAsync());
-        }
-
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var orderItem = await _context.OrderItems
+            var cartItems = await _context.OrderItems
                 .Include(o => o.Clients)
                 .Include(o => o.Products)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Where(o => o.ClientId == user.Id)
+                .OrderByDescending(o => o.RegOn)
+                .ToListAsync();
 
-            if (orderItem == null)
-            {
-                return NotFound();
-            }
-
-            if (!User.IsInRole("Admin") && orderItem.ClientId != _userManager.GetUserId(User))
-            {
-                return Forbid();
-            }
-
-            return View(orderItem);
+            return View(cartItems);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> MyOrders()
         {
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name");
-            return View();
+            var user = await _userManager.GetUserAsync(User);
+
+            if (_savedOrders.ContainsKey(user.Id))
+            {
+                var myOrders = _savedOrders[user.Id]
+                    .OrderByDescending(o => o.RegOn)
+                    .ToList();
+
+                return View(myOrders);
+            }
+
+            return View(new List<OrderItem>());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,Quantity")] OrderItem orderItem)
+        public async Task<IActionResult> AddToCart(int productId, int quantity = 1)
         {
-            orderItem.ClientId = _userManager.GetUserId(User);
-            orderItem.RegOn = DateTime.Now;
+            var user = await _userManager.GetUserAsync(User);
 
-            ModelState.Remove("ClientId");
-            ModelState.Remove("RegOn");
-
-            if (ModelState.IsValid)
+            if (user == null)
             {
-                _context.Add(orderItem);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Challenge();
             }
 
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name", orderItem.ProductId);
-            return View(orderItem);
-        }
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == productId);
 
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
+            if (product == null)
             {
                 return NotFound();
             }
 
-            var orderItem = await _context.OrderItems.FindAsync(id);
-            if (orderItem == null)
+            var existingItem = await _context.OrderItems
+                .FirstOrDefaultAsync(o => o.ClientId == user.Id && o.ProductId == productId);
+
+            if (existingItem != null)
             {
-                return NotFound();
+                existingItem.Quantity += quantity;
+                existingItem.RegOn = DateTime.Now;
             }
-
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name", orderItem.ProductId);
-            return View(orderItem);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ClientId,ProductId,Quantity,RegOn")] OrderItem orderItem)
-        {
-            if (id != orderItem.Id)
+            else
             {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
+                var orderItem = new OrderItem
                 {
-                    _context.Update(orderItem);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!OrderItemExists(orderItem.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                    ClientId = user.Id,
+                    ProductId = productId,
+                    Quantity = quantity,
+                    RegOn = DateTime.Now
+                };
 
-                return RedirectToAction(nameof(Index));
-            }
-
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name", orderItem.ProductId);
-            return View(orderItem);
-        }
-
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var orderItem = await _context.OrderItems
-                .Include(o => o.Clients)
-                .Include(o => o.Products)
-                .FirstOrDefaultAsync(m => m.Id == id);
-
-            if (orderItem == null)
-            {
-                return NotFound();
-            }
-
-            return View(orderItem);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var orderItem = await _context.OrderItems.FindAsync(id);
-            if (orderItem != null)
-            {
-                _context.OrderItems.Remove(orderItem);
+                _context.OrderItems.Add(orderItem);
             }
 
             await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Продуктът беше добавен в количката.";
+
             return RedirectToAction(nameof(Index));
         }
 
-        private bool OrderItemExists(int id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CompleteOrder()
         {
-            return _context.OrderItems.Any(e => e.Id == id);
+            var user = await _userManager.GetUserAsync(User);
+
+            var cartItems = await _context.OrderItems
+                .Include(o => o.Clients)
+                .Include(o => o.Products)
+                .Where(o => o.ClientId == user.Id)
+                .ToListAsync();
+
+            if (cartItems.Any())
+            {
+                if (!_savedOrders.ContainsKey(user.Id))
+                {
+                    _savedOrders[user.Id] = new List<OrderItem>();
+                }
+
+                foreach (var item in cartItems)
+                {
+                    _savedOrders[user.Id].Add(new OrderItem
+                    {
+                        Id = item.Id,
+                        ClientId = item.ClientId,
+                        Clients = item.Clients,
+                        ProductId = item.ProductId,
+                        Products = item.Products,
+                        Quantity = item.Quantity,
+                        RegOn = DateTime.Now
+                    });
+                }
+
+                _context.OrderItems.RemoveRange(cartItems);
+                await _context.SaveChangesAsync();
+
+                TempData["SuccessMessage"] = "Успешно направихте поръчка.";
+            }
+
+            return RedirectToAction(nameof(MyOrders));
         }
     }
 }

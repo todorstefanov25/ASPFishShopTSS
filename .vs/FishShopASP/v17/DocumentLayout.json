@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\views\\orderitems\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\orderitems\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\views\\orderitems\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\orderitems\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\views\\orderitems\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\orderitems\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\data\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:data\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\data\\migrations\\20260317115428_regon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:data\\migrations\\20260317115428_regon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\data\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:data\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\desktop\\todor 12aaaa\\fishshopasp\\aspfishshoptss\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,77 +55,119 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAmwKQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:29:51.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAYwBUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:21:11.526Z",
+              "Title": "MyOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\OrderItems\\MyOrders.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderItems\\MyOrders.cshtml",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\OrderItems\\MyOrders.cshtml",
+              "RelativeToolTip": "Views\\OrderItems\\MyOrders.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAiwEEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-14T10:44:05.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\OrderItems\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\OrderItems\\Create.cshtml",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\OrderItems\\Create.cshtml",
-              "RelativeToolTip": "Views\\OrderItems\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEIAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-17T12:13:06.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderItemsController.cs",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Controllers\\OrderItemsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderItemsController.cs",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Controllers\\OrderItemsController.cs",
-              "RelativeToolTip": "Controllers\\OrderItemsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA5wCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T12:09:37.928Z",
+              "WhenOpened": "2026-04-14T10:39:18.486Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Data\\Product.cs",
-              "RelativeDocumentMoniker": "Data\\Product.cs",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Data\\Product.cs",
-              "RelativeToolTip": "Data\\Product.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T11:58:51.136Z"
+              "WhenOpened": "2026-04-14T10:30:36.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Controllers\\OrderItemsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderItemsController.cs",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Controllers\\OrderItemsController.cs",
+              "RelativeToolTip": "Controllers\\OrderItemsController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAmwIsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T10:27:11.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\OrderItems\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderItems\\Index.cshtml",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\OrderItems\\Index.cshtml",
+              "RelativeToolTip": "Views\\OrderItems\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAiwFgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-14T10:12:25.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-14T10:10:11.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-14T10:02:13.556Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "20260317115428_regon.cs",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Data\\Migrations\\20260317115428_regon.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20260317115428_regon.cs",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Data\\Migrations\\20260317115428_regon.cs",
-              "RelativeToolTip": "Data\\Migrations\\20260317115428_regon.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Data\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Data\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\Data\\OrderItem.cs",
+              "RelativeToolTip": "Data\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T11:54:29.113Z"
+              "WhenOpened": "2026-04-14T09:59:27.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Desktop\\Todor 12aaaa\\FishShopASP\\ASPFishShopTSS\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-14T09:52:49.22Z",
+              "EditorCaption": ""
             }
           ]
         }
