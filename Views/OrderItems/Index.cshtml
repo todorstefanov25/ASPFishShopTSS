@@ -6,15 +6,15 @@
 }
 
 <div class="container py-5">
-    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div class="d-flex justify-content-between align-items-center mb-5 flex-wrap gap-3">
         <div>
-            <h1 class="fw-bold mb-1">Моята количка</h1>
-            <p class="text-muted mb-0">Прегледай продуктите преди да завършиш поръчката</p>
+            <h1 class="fw-bold brand-name mb-1">🛒 Моята количка</h1>
+            <p class="text-muted mb-0">Прегледайте избраните продукти преди покупка</p>
         </div>
 
         <div class="d-flex gap-2">
-            <a asp-action="MyOrders" class="btn btn-outline-dark rounded-pill px-4">
-                Моите поръчки
+            <a asp-action="MyOrders" class="btn btn-outline-secondary rounded-pill px-4">
+                История на поръчките
             </a>
         </div>
     </div>
@@ -28,11 +28,12 @@
 
     @if (!Model.Any())
     {
-        <div class="card border-0 shadow-sm rounded-4 p-5 text-center">
-            <h3 class="fw-semibold mb-3">Количката е празна</h3>
-            <p class="text-muted mb-4">Добави продукти, за да направиш поръчка</p>
-            <a asp-controller="Products" asp-action="Index" class="btn btn-dark rounded-pill px-4">
-                Разгледай продуктите
+        <div class="auth2-card p-5 text-center shadow-soft">
+            
+            <h3 class="fw-bold brand-name mb-3">Количката ви е празна</h3>
+            <p class="text-muted mb-4">Изглежда още не сте избрали нищо от нашия магазин.</p>
+            <a asp-controller="Products" asp-action="Index" class="btn btn-primary auth2-primary rounded-pill px-5 py-2">
+                Към продуктите
             </a>
         </div>
     }
@@ -42,20 +43,47 @@
             <div class="col-lg-8">
                 @foreach (var item in Model)
                 {
-                    <div class="card border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
-                        <div class="card-body p-4">
+                    <div class="auth2-card shadow-soft mb-3 border-0">
+                        <div class="auth2-body p-4">
                             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">@item.Products.Name</h4>
-                                    <div class="text-muted mb-2">Добавено на: @item.RegOn.ToString("dd.MM.yyyy HH:mm")</div>
-                                    <div class="fs-6">Количество: <span class="fw-semibold">@item.Quantity</span></div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-light rounded-3 p-2 text-center" style="width: 78px; height: 64px;">
+                                        @if (!string.IsNullOrWhiteSpace(item.Products.imageURL))
+                                        {
+                                            <img src="@item.Products.imageURL" alt="@item.Products.Name" class="img-fluid h-100" style="object-fit: contain;" />
+                                        }
+                                        else
+                                        {
+                                            <span style="font-size: 24px;">🎣</span>
+                                        }
+                                    </div>
+                                    <div>
+                                        <h4 class="fw-bold brand-name mb-1">@item.Products.Name</h4>
+                                        <div class="text-muted small mb-2">Ед. цена: <span class="fw-bold text-dark">@item.Products.Price.ToString("0.00") €</span></div>
+                                        <div class="text-muted" style="font-size: 0.8rem;">Добавено: @item.RegOn.ToString("dd.MM.yyyy HH:mm")</div>
+                                    </div>
                                 </div>
 
-                                <div class="text-end">
-                                    <div class="text-muted small">Единична цена</div>
-                                    <div class="fw-semibold fs-5">@item.Products.Price.ToString("0.00") лв.</div>
-                                    <div class="text-muted small mt-2">Общо</div>
-                                    <div class="fw-bold fs-4">@((item.Products.Price * item.Quantity).ToString("0.00")) лв.</div>
+                                <div class="text-end" style="min-width: 230px;">
+                                    <div class="text-muted small">Общо за продукта</div>
+                                    <div class="fw-bold fs-4 text-success">@((item.Products.Price * item.Quantity).ToString("0.00")) €</div>
+
+                                    <form asp-action="UpdateQuantity" method="post" class="d-flex justify-content-end gap-2 mt-3">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <input type="number" name="quantity" value="@item.Quantity" min="1" max="99"
+                                               class="form-control form-control-sm rounded-pill text-center fw-bold"
+                                               style="width: 78px;" aria-label="Количество за @item.Products.Name" />
+                                        <button type="submit" class="btn btn-sm btn-outline-primary rounded-pill px-3">
+                                            Обнови
+                                        </button>
+                                    </form>
+
+                                    <form asp-action="RemoveFromCart" method="post" class="mt-2">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button type="submit" class="btn btn-link text-danger p-0 small text-decoration-none" onclick="return confirm('Изтриване на артикула от количката?')">
+                                            Изтрий
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -64,24 +92,30 @@
             </div>
 
             <div class="col-lg-4">
-                <div class="card border-0 shadow rounded-4 p-4 sticky-top" style="top: 100px;">
-                    <h3 class="fw-bold mb-4">Обобщение</h3>
+                <div class="auth2-card shadow-soft p-4 sticky-top" style="top: 100px; border-top: 5px solid var(--navy) !important;">
+                    <h3 class="fw-bold brand-name mb-4">Обобщение</h3>
 
-                    <div class="d-flex justify-content-between mb-3">
-                        <span class="text-muted">Продукти</span>
-                        <span class="fw-semibold">@Model.Count()</span>
+                    <div class="d-flex justify-content-between mb-3 border-bottom pb-2">
+                        <span class="text-muted">Брой позиции:</span>
+                        <span class="fw-bold">@Model.Count()</span>
                     </div>
 
                     <div class="d-flex justify-content-between mb-4">
-                        <span class="text-muted">Крайна сума</span>
-                        <span class="fw-bold fs-4">@total.ToString("0.00") лв.</span>
+                        <span class="text-muted">Крайна сума:</span>
+                        <div class="text-end">
+                            <span class="h3 fw-bold text-success mb-0">@total.ToString("0.00") €</span>
+                        </div>
                     </div>
 
                     <form asp-action="CompleteOrder" method="post">
-                        <button type="submit" class="btn btn-dark w-100 rounded-pill py-3 fw-semibold">
+                        <button type="submit" class="btn btn-primary auth2-primary w-100 rounded-pill py-3 fw-bold shadow-sm">
                             Завърши поръчката
                         </button>
                     </form>
+
+                    <p class="text-center text-muted small mt-3 mb-0">
+                        Плащането се извършва при доставка.
+                    </p>
                 </div>
             </div>
         </div>

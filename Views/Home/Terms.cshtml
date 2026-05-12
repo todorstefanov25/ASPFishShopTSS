@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Общи условия";
+}
+
+<div class="auth2">
+    <div class="auth2-bg"></div>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="auth2-card shadow-soft p-4 p-md-5">
+
+                    <div class="auth2-header border-bottom pb-4 mb-4">
+                        <div class="brand">
+                            <div class="brand-icon">⚖️</div>
+                            <div>
+                                <h1 class="brand-name h2 mb-0">Общи условия</h1>
+                                <div class="brand-sub">Последна актуализация: @DateTime.Now.ToString("dd.MM.yyyy")</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="auth2-body text-dark" style="line-height: 1.6;">
+                        <section class="mb-4">
+                            <h4 class="fw-bold text-navy"><i class="bi bi-info-circle me-2"></i>1. Общи положения</h4>
+                            <p>Настоящите общи условия уреждат отношенията между „Риболовен майстор“ (FishShopASP) и потребителите на електронния магазин. Използването на сайта и извършването на поръчка означава, че приемате тези условия.</p>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4 class="fw-bold text-navy"><i class="bi bi-truck me-2"></i>2. Доставка</h4>
+                            <p>Доставките се извършват чрез куриерски фирми до посочен от Вас адрес или офис. Срокът за доставка е от 1 до 3 работни дни. Плащането се извършва чрез наложен платеж при получаване на стоката.</p>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4 class="fw-bold text-navy"><i class="bi bi-arrow-left-right me-2"></i>3. Връщане и замяна</h4>
+                            <p>Всеки клиент има право да върне закупен продукт в рамките на 14 дни от датата на получаване, при условие че продуктът е в оригиналния си търговски вид, не е използван и опаковката му е запазена.</p>
+                        </section>
+
+                        <section class="mb-4">
+                            <h4 class="fw-bold text-navy"><i class="bi bi-shield-lock me-2"></i>4. Защита на личните данни</h4>
+                            <p>Ние ценим Вашата поверителност. Вашите данни се използват единствено за обработка на поръчките и комуникация с Вас. Не предоставяме информация на трети лица, освен за целите на доставката.</p>
+                        </section>
+
+                        <section class="mb-0">
+                            <h4 class="fw-bold text-navy"><i class="bi bi-envelope-at me-2"></i>5. Контакти</h4>
+                            <p>При въпроси относно нашите продукти или Вашите поръчки, можете да се свържете с нас на телефон <strong>+359 888 352 906</strong> или имейл <strong>info@ribolovenmaistor.bg</strong>.</p>
+                        </section>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-top text-center">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-primary auth2-primary rounded-pill px-5 py-2">
+                            Разбрах, към началната страница
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

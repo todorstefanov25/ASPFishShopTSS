@@ -1,60 +1,111 @@
 ﻿@model FishShopASP.Data.Product
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Редактиране";
 }
 
-<h1>Edit</h1>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
 
-<h4>Product</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="CatalogNumber" class="control-label"></label>
-                <input asp-for="CatalogNumber" class="form-control" />
-                <span asp-validation-for="CatalogNumber" class="text-danger"></span>
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div>
+                    <h1 class="display-6 fw-bold brand-name mb-0">Редактиране</h1>
+                    <p class="text-muted">Промяна на данни за продукт №@Model.CatalogNumber</p>
+                </div>
+                <a asp-action="Index" class="btn btn-outline-secondary rounded-pill px-4">
+                    Назад
+                </a>
             </div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+
+            <div class="auth2-card shadow-soft">
+                <div class="auth2-body p-4 p-lg-5">
+
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger alert-validation rounded-3"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="RegOn" />
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="CatalogNumber" class="form-control auth2-input" placeholder="Каталожен №" />
+                                    <label asp-for="CatalogNumber">Каталожен №</label>
+                                    <span asp-validation-for="CatalogNumber" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <select asp-for="CategoryId" class="form-select auth2-input" asp-items="ViewBag.CategoryId">
+                                    </select>
+                                    <label asp-for="CategoryId">Категория</label>
+                                    <span asp-validation-for="CategoryId" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Name" class="form-control auth2-input" placeholder="Име на продукта" />
+                                    <label asp-for="Name">Име на продукта</label>
+                                    <span asp-validation-for="Name" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Price" class="form-control auth2-input" placeholder="Цена" />
+                                    <label asp-for="Price">Цена (€)</label>
+                                    <span asp-validation-for="Price" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <textarea asp-for="Description" class="form-control auth2-input" style="height: 120px" placeholder="Описание"></textarea>
+                                    <label asp-for="Description">Описание</label>
+                                    <span asp-validation-for="Description" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating mb-4">
+                                    <input asp-for="imageURL" class="form-control auth2-input" placeholder="URL на изображение" />
+                                    <label asp-for="imageURL">URL на изображение</label>
+                                    <span asp-validation-for="imageURL" class="text-danger small"></span>
+                                </div>
+                            </div>
+
+                            @if (!string.IsNullOrEmpty(Model.imageURL))
+                            {
+                                <div class="col-12 mb-4">
+                                    <div class="d-flex align-items-center gap-3 p-3 border rounded-3 bg-light">
+                                        <img src="@Model.imageURL" alt="Preview" style="width: 60px; height: 60px; object-fit: cover;" class="rounded shadow-sm">
+                                        <div class="small text-muted">Текущо изображение</div>
+                                    </div>
+                                </div>
+                            }
+
+                            <div class="col-12 mt-2">
+                                <button type="submit" class="btn btn-success auth2-primary w-100 py-3 rounded-pill shadow mb-3">
+                                    Запази промените
+                                </button>
+                                <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-link w-100 text-decoration-none text-muted">
+                                    Отказ
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="imageURL" class="control-label"></label>
-                <input asp-for="imageURL" class="form-control" />
-                <span asp-validation-for="imageURL" class="text-danger"></span>
-            </div>
-        
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

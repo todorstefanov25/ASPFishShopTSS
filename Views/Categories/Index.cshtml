@@ -4,49 +4,74 @@
     ViewData["Title"] = "Категории";
 }
 
-<div class="page-head">
-    <div class="d-flex align-items-start justify-content-between gap-3 flex-wrap">
-        <div>
-            <h1 class="h3 fw-bold mb-1">Категории</h1>
-            <div class="text-muted">Създавай и управлявай категориите в магазина.</div>
-        </div>
+<div class="container-fluid px-4 py-4">
 
-        <div class="d-flex gap-2">
-            <a asp-action="Create" class="btn btn-primary btn-lg px-4">
+    <div class="page-head shadow-soft mb-4 p-4 auth2-card border-0">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div>
+                <span class="small text-uppercase fw-bold text-muted">
+                    FishShopASP
+                </span>
+                <h1 class="display-6 fw-bold mb-1 brand-name">
+                    Категории
+                </h1>
+                <p class="text-muted mb-0">
+                    Създавай и управлявай категориите в магазина.
+                </p>
+            </div>
+
+            <a asp-action="Create"
+               class="btn btn-primary auth2-primary btn-lg px-4 rounded-pill fw-bold shadow">
                 + Нова категория
             </a>
         </div>
     </div>
-</div>
 
-<div class="categories-grid mt-3">
-    @foreach (var item in Model)
-    {
-        <div class="category-card">
-            <div class="category-body">
-                <div class="d-flex align-items-start justify-content-between gap-3">
-                    <div class="min-w-0">
-                        <div class="category-title text-truncate">@item.Name</div>
-                        <div class="category-sub text-muted">ID: <span class="fw-semibold">@item.Id</span></div>
+    <div class="row g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="auth2-card h-100 shadow-soft border-0">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="brand-icon">
+                                    <i class="bi bi-tag-fill"></i>
+                                </div>
+                                <div>
+                                    <div class="fs-4 fw-bold text-navy">
+                                        @item.Name
+                                    </div>
+                                    <div class="small text-muted">
+                                        ID: <span class="fw-semibold">@item.Id</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="badge rounded-pill bg-light text-dark border px-3 py-2">
+                                Категория
+                            </span>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <a asp-action="Details"
+                               asp-route-id="@item.Id"
+                               class="btn btn-outline-primary rounded-pill px-3 fw-semibold flex-grow-1">
+                                Детайли
+                            </a>
+                            <a asp-action="Edit"
+                               asp-route-id="@item.Id"
+                               class="btn btn-outline-secondary rounded-pill px-3 fw-semibold flex-grow-1">
+                                Редакция
+                            </a>
+                            <a asp-action="Delete"
+                               asp-route-id="@item.Id"
+                               class="btn btn-outline-danger rounded-pill px-3 fw-semibold">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </div>
                     </div>
-
-                    <span class="badge rounded-pill text-bg-light border category-badge">
-                        Категория
-                    </span>
-                </div>
-
-                <div class="category-actions mt-3">
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary">
-                        Детайли
-                    </a>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary">
-                        Редакция
-                    </a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
-                        Изтрий
-                    </a>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>

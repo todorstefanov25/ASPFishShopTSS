@@ -1,58 +1,81 @@
 ﻿@model FishShopASP.Data.Product
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Добавяне на продукт";
 }
 
-<h1>Create</h1>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-sm border-0 rounded-3">
 
-<h4>Product</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="CatalogNumber" class="control-label"></label>
-                <input asp-for="CatalogNumber" class="form-control" />
-                <span asp-validation-for="CatalogNumber" class="text-danger"></span>
+                <div class="card-header bg-white py-3 border-bottom">
+                    <h4 class="mb-0 fw-bold text-navy">Нов продукт</h4>
+                </div>
+
+                <div class="card-body p-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label asp-for="CatalogNumber" class="form-label small fw-bold">Каталожен номер</label>
+                                <input asp-for="CatalogNumber" class="form-control" placeholder="#0000" />
+                                <span asp-validation-for="CatalogNumber" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Name" class="form-label small fw-bold">Име на продукта</label>
+                                <input asp-for="Name" class="form-control" placeholder="Въведете име..." />
+                                <span asp-validation-for="Name" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="Price" class="form-label small fw-bold">Цена (лв.)</label>
+                                <input asp-for="Price" class="form-control" />
+                                <span asp-validation-for="Price" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="CategoryId" class="form-label small fw-bold">Категория</label>
+                                <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.CategoryId">
+                                    <option value="">-- Изберете категория --</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="imageURL" class="form-label small fw-bold">Линк към снимка</label>
+                                <input asp-for="imageURL" class="form-control" placeholder="https://..." />
+                                <span asp-validation-for="imageURL" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label asp-for="Description" class="form-label small fw-bold">Описание</label>
+                                <textarea asp-for="Description" class="form-control" rows="3" placeholder="Кратко описание..."></textarea>
+                                <span asp-validation-for="Description" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <div class="d-flex gap-2">
+                                    <button type="submit" class="btn btn-primary px-4 fw-bold">
+                                        Запази
+                                    </button>
+                                    <a asp-action="Index" class="btn btn-outline-secondary px-4">
+                                        Отказ
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="imageURL" class="control-label"></label>
-                <input asp-for="imageURL" class="form-control" />
-                <span asp-validation-for="imageURL" class="text-danger"></span>
-            </div>
-         
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

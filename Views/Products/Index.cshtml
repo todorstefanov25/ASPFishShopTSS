@@ -4,87 +4,127 @@
     ViewData["Title"] = "Продукти";
 }
 
-<div class="page-head">
-    <div class="d-flex align-items-start justify-content-between gap-3 flex-wrap">
-        <div>
-            <h1 class="h3 fw-bold mb-1">Продукти</h1>
-            <div class="text-muted">Управлявай каталога си бързо и удобно.</div>
-        </div>
+<div class="container-fluid px-4 py-4">
 
-        <div class="d-flex gap-2">
-            <a asp-action="Create" class="btn btn-primary btn-lg px-4">
-                + Нов продукт
-            </a>
+    <div class="page-head shadow-soft mb-4 p-4 auth2-card border-0">
+        <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+            <div>
+                <span class="small text-uppercase fw-bold text-muted"> FishShopASP </span>
+                <h1 class="display-6 fw-bold mb-1 brand-name"> Продукти </h1>
+                <p class="text-muted mb-0"> Разгледайте нашия каталог и изберете най-доброто. </p>
+            </div>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-action="Create"
+                   class="btn btn-primary auth2-primary btn-lg px-4 rounded-pill fw-bold shadow">
+                    + Нов продукт
+                </a>
+            }
         </div>
+    </div>
+
+    <div class="row g-3 justify-content-start mb-5">
+        @foreach (var item in Model)
+        {
+            <div class="col-6 col-sm-auto">
+                <div class="product-modern-card h-100 shadow-soft border-0">
+                    <div class="product-modern-image-wrapper">
+                        @if (!string.IsNullOrWhiteSpace(item.imageURL))
+                        {
+                            <img src="@item.imageURL" alt="@item.Name" class="product-modern-image" />
+                        }
+                        else
+                        {
+                            <div class="product-modern-placeholder"> 🐟 </div>
+                        }
+
+                        <div class="product-modern-price">
+                            @item.Price.ToString("0.00") €
+                        </div>
+                    </div>
+
+                    <div class="product-modern-body p-3">
+                        <span class="badge rounded-pill bg-light text-dark border px-2 py-1 mb-2" style="font-size: 0.7rem;">
+                            @item.Categories?.Name
+                        </span>
+
+                        <h3 class="product-modern-title text-truncate fw-bold mb-1" title="@item.Name" style="font-size: 1.1rem;">
+                            @item.Name
+                        </h3>
+
+                        <div class="product-modern-catalog text-muted small mb-2">
+                            №: @item.CatalogNumber
+                        </div>
+
+                        <div class="product-modern-actions mt-auto">
+                            <form asp-controller="OrderItems" asp-action="AddToCart" method="post" class="w-100 mb-2">
+                                <input type="hidden" name="productId" value="@item.Id" />
+                                <div class="d-flex gap-1 mb-2">
+                                    <input type="number" name="quantity" value="1" min="1" max="99"
+                                           class="form-control form-control-sm rounded-pill text-center border-success fw-bold"
+                                           style="width: 65px;" />
+                                    <button type="submit" class="btn btn-success flex-grow-1 rounded-pill fw-bold py-1 shadow-sm">
+                                        🛒 Купи
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div class="d-flex gap-1">
+                                <a asp-action="Details" asp-route-id="@item.Id"
+                                   class="btn btn-outline-primary rounded-pill flex-fill py-1 small fw-bold">
+                                    Детайли
+                                </a>
+
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary rounded-pill px-2 py-1">
+                                        <i class="bi bi-pencil small"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger rounded-pill px-2 py-1">
+                                        <i class="bi bi-trash small"></i>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
 
-<div class="products-grid mt-3">
-    @foreach (var item in Model)
-    {
-        <div class="product-card">
-            <div class="product-body d-flex flex-column h-100">
+<footer class="site-footer mt-5">
+    <div class="container-fluid px-4">
+        <div class="row text-center text-md-start">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Риболовен майстор</h5>
+                <p>Онлайн магазин за качествени риболовни принадлежности, аксесоари и оборудване.</p>
+            </div>
 
-                <div class="product-price">
-                    @item.Price.ToString("0.00") €
-                </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Полезни връзки</h5>
+                <ul class="list-unstyled">
+                    <li><a asp-controller="Home" asp-action="Index">Начало</a></li>
+                    <li><a asp-controller="Products" asp-action="Index">Продукти</a></li>
+                    <li><a asp-controller="Home" asp-action="Terms">Условия</a></li>
+                </ul>
+            </div>
 
-                <div class="text-center mb-3">
-                    @if (!string.IsNullOrWhiteSpace(item.imageURL))
-                    {
-                        <img class="product-mini" src="@item.imageURL" alt="@item.Name" width="200" height="200" />
-                    }
-                    else
-                    {
-                        <div class="product-mini product-mini-placeholder d-inline-flex align-items-center justify-content-center">🐟</div>
-                    }
-                </div>
-
-                <div class="mb-2">
-                    <div class="product-title">@item.Name</div>
-                    <div class="product-sub text-muted">
-                        Каталог №: <span class="fw-semibold">@item.CatalogNumber</span>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-3">
-                    <span class="badge rounded-pill text-bg-light border">
-                        @item.Categories?.Name
-                    </span>
-
-                    <small class="text-muted">
-                        @item.RegOn.ToString("dd.MM.yyyy")
-                    </small>
-                </div>
-
-                @if (!string.IsNullOrWhiteSpace(item.Description))
-                {
-                    <div class="product-desc mb-3">
-                        @item.Description
-                    </div>
-                }
-
-                <div class="product-actions mt-auto">
-                    <form asp-controller="OrderItems" asp-action="AddToCart" method="post">
-                        <input type="hidden" name="productId" value="@item.Id" />
-                        <input type="hidden" name="quantity" value="1" />
-                        <button type="submit" class="btn btn-success">🛒 Купи</button>
-                    </form>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary">
-                        Детайли
-                    </a>
-                    @if(User.IsInRole("Admin"))
-                    {
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary">
-                        Редакция
-                    </a>
-
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
-                        Изтрий
-                    </a>
-                    }
-                </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Контакти</h5>
+                <p class="mb-1">📍 гр. Сопот, България</p>
+                <p class="mb-1">📞 +359 888 352 906</p>
+                <p class="mb-1">✉ info@ribolovenmaistor.bg</p>
             </div>
         </div>
-    }
-</div>
+
+        <hr class="footer-line" />
+
+        <div class="text-center pb-3">
+            <p class="mb-0 small text-light opacity-75">
+                &copy; @DateTime.Now.Year - Риболовен майстор. Всички права запазени.
+            </p>
+        </div>
+    </div>
+</footer>

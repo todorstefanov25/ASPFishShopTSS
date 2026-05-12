@@ -40,6 +40,10 @@
                         <li class="nav-item">
                             <a class="nav-link nav-link-pro" asp-controller="Home" asp-action="Contacts">Контакти</a>
                         </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-pro" asp-controller="Home" asp-action="Terms">Условия</a>
+                        </li>
                     </ul>
 
                     <div class="d-flex align-items-center gap-2">
@@ -49,17 +53,12 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - FishShopASP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+  
+    <main role="main">
+        @RenderBody()
+    </main>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

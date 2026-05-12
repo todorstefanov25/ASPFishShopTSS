@@ -12,8 +12,6 @@ namespace FishShopASP.Controllers
         private readonly ApplicationDbContext _context;
         private readonly UserManager<Client> _userManager;
 
-        private static readonly Dictionary<string, List<OrderItem>> _savedOrders = new();
-
         public OrderItemsController(ApplicationDbContext context, UserManager<Client> userManager)
         {
             _context = context;
@@ -27,7 +25,7 @@ namespace FishShopASP.Controllers
             var cartItems = await _context.OrderItems
                 .Include(o => o.Clients)
                 .Include(o => o.Products)
-                .Where(o => o.ClientId == user.Id)
+                .Where(o => o.ClientId == user.Id && !o.IsCompleted)
                 .OrderByDescending(o => o.RegOn)
                 .ToListAsync();
 
@@ -38,16 +36,14 @@ namespace FishShopASP.Controllers
         {
             var user = await _userManager.GetUserAsync(User);
 
-            if (_savedOrders.ContainsKey(user.Id))
-            {
-                var myOrders = _savedOrders[user.Id]
-                    .OrderByDescending(o => o.RegOn)
-                    .ToList();
+            var myOrders = await _context.OrderItems
+                .Include(o => o.Clients)
+                .Include(o => o.Products)
+                .Where(o => o.ClientId == user.Id && o.IsCompleted)
+                .OrderByDescending(o => o.RegOn)
+                .ToListAsync();
 
-                return View(myOrders);
-            }
-
-            return View(new List<OrderItem>());
+            return View(myOrders);
         }
 
         [HttpPost]
@@ -69,7 +65,7 @@ namespace FishShopASP.Controllers
             }
 
             var existingItem = await _context.OrderItems
-                .FirstOrDefaultAsync(o => o.ClientId == user.Id && o.ProductId == productId);
+                .FirstOrDefaultAsync(o => o.ClientId == user.Id && o.ProductId == productId && !o.IsCompleted);
 
             if (existingItem != null)
             {
@@ -83,7 +79,8 @@ namespace FishShopASP.Controllers
                     ClientId = user.Id,
                     ProductId = productId,
                     Quantity = quantity,
-                    RegOn = DateTime.Now
+                    RegOn = DateTime.Now,
+                    IsCompleted = false
                 };
 
                 _context.OrderItems.Add(orderItem);
@@ -97,6 +94,69 @@ namespace FishShopASP.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateQuantity(int id, int quantity)
+        {
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return Challenge();
+            }
+
+            var orderItem = await _context.OrderItems
+                .FirstOrDefaultAsync(o => o.Id == id && o.ClientId == user.Id && !o.IsCompleted);
+
+            if (orderItem == null)
+            {
+                return NotFound();
+            }
+
+            if (quantity < 1)
+            {
+                _context.OrderItems.Remove(orderItem);
+                TempData["SuccessMessage"] = "Артикулът беше премахнат от количката.";
+            }
+            else
+            {
+                orderItem.Quantity = quantity;
+                orderItem.RegOn = DateTime.Now;
+                TempData["SuccessMessage"] = "Количеството беше обновено.";
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RemoveFromCart(int id)
+        {
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return Challenge();
+            }
+
+            var orderItem = await _context.OrderItems
+                .FirstOrDefaultAsync(o => o.Id == id && o.ClientId == user.Id && !o.IsCompleted);
+
+            if (orderItem == null)
+            {
+                return NotFound();
+            }
+
+            _context.OrderItems.Remove(orderItem);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Артикулът беше премахнат от количката.";
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> CompleteOrder()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -104,31 +164,21 @@ namespace FishShopASP.Controllers
             var cartItems = await _context.OrderItems
                 .Include(o => o.Clients)
                 .Include(o => o.Products)
-                .Where(o => o.ClientId == user.Id)
+                .Where(o => o.ClientId == user.Id && !o.IsCompleted)
                 .ToListAsync();
 
             if (cartItems.Any())
             {
-                if (!_savedOrders.ContainsKey(user.Id))
-                {
-                    _savedOrders[user.Id] = new List<OrderItem>();
-                }
+                var orderNumber = $"ORD-{DateTime.Now:yyyyMMddHHmmss}";
+                var completedOn = DateTime.Now;
 
                 foreach (var item in cartItems)
                 {
-                    _savedOrders[user.Id].Add(new OrderItem
-                    {
-                        Id = item.Id,
-                        ClientId = item.ClientId,
-                        Clients = item.Clients,
-                        ProductId = item.ProductId,
-                        Products = item.Products,
-                        Quantity = item.Quantity,
-                        RegOn = DateTime.Now
-                    });
+                    item.IsCompleted = true;
+                    item.OrderNumber = orderNumber;
+                    item.RegOn = completedOn;
                 }
 
-                _context.OrderItems.RemoveRange(cartItems);
                 await _context.SaveChangesAsync();
 
                 TempData["SuccessMessage"] = "Успешно направихте поръчка.";

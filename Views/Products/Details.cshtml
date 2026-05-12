@@ -1,60 +1,125 @@
 ﻿@model FishShopASP.Data.Product
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Детайли за " + Model.Name;
 }
 
-<h1>Details</h1>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CatalogNumber)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CatalogNumber)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Categories)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Categories.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.imageURL)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.imageURL)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RegOn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RegOn)
-        </dd>
-    </dl>
+            <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
+                <div>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-1">
+                            <li class="breadcrumb-item"><a asp-action="Index" class="text-decoration-none">Продукти</a></li>
+                            <li class="breadcrumb-item active text-muted" aria-current="page">@Model.Categories?.Name</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-5 fw-bold brand-name mb-0">@Model.Name</h1>
+                </div>
+                <a asp-action="Index" class="btn btn-outline-secondary rounded-pill px-4">
+                    <i class="bi bi-arrow-left"></i> Назад
+                </a>
+            </div>
+
+            <div class="auth2-card shadow-soft">
+                <div class="row g-0">
+
+                    <div class="col-md-5 bg-light d-flex align-items-center justify-content-center p-4 border-end" style="min-height: 400px;">
+                        @if (!string.IsNullOrWhiteSpace(Model.imageURL))
+                        {
+                            <img src="@Model.imageURL" alt="@Model.Name" class="img-fluid rounded-3 shadow-sm" style="max-height: 350px; object-fit: contain;">
+                        }
+                        else
+                        {
+                            <div class="display-1">📦</div>
+                        }
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="auth2-body p-4 p-lg-5">
+                            <div class="d-flex justify-content-between align-items-start mb-4">
+                                <span class="badge bg-primary auth2-pill py-2 px-3">
+                                    @Model.Categories?.Name
+                                </span>
+                                <div class="text-end">
+                                    <small class="text-muted d-block">Каталожен №</small>
+                                    <span class="fw-bold">@Model.CatalogNumber</span>
+                                </div>
+                            </div>
+
+                            <h2 class="h1 fw-bold text-success mb-4">
+                                @Model.Price.ToString("0.00") €
+                            </h2>
+
+                            <div class="mb-4">
+                                <h5 class="fw-bold brand-name border-bottom pb-2">Описание</h5>
+                                <p class="text-muted lh-base">
+                                    @if (!string.IsNullOrEmpty(Model.Description))
+                                    {
+                                        @Model.Description
+                                    }
+                                    else
+                                    {
+                                        <span class="fst-italic">Няма налично описание за този продукт.</span>
+                                    }
+                                </p>
+                            </div>
+
+                            <div class="row g-3 mb-5">
+                                <div class="col-6">
+                                    <div class="p-3 border rounded-3 bg-white shadow-sm">
+                                        <small class="text-muted d-block uppercase small fw-bold">Добавен на</small>
+                                        <span>@Model.RegOn.ToString("dd.MM.yyyy")</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 border rounded-3 bg-white shadow-sm">
+                                        <small class="text-muted d-block uppercase small fw-bold">Наличност</small>
+                                        <span class="text-success fw-bold">В наличност</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-3">
+                                <form asp-controller="OrderItems" asp-action="AddToCart" method="post" class="flex-grow-1">
+                                    <input type="hidden" name="productId" value="@Model.Id" />
+
+                                    <div class="d-flex gap-2">
+                                        <div style="width: 120px;">
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-light border-end-0 text-muted small">бр.</span>
+                                                <input type="number" name="quantity" value="1" min="1" max="99"
+                                                       class="form-control border-start-0 text-center fw-bold shadow-none" />
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-success auth2-primary flex-grow-1 py-3 rounded-pill shadow">
+                                            🛒 Добави в количката
+                                        </button>
+                                    </div>
+                                </form>
+
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-secondary rounded-pill px-4 d-flex align-items-center">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

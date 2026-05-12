@@ -15,6 +15,8 @@ namespace FishShopASP.Data
         public int Quantity { get; set; }
         [Required]
         public DateTime RegOn { get; set; }
+        public bool IsCompleted { get; set; }
+        public string? OrderNumber { get; set; }
 
 
 

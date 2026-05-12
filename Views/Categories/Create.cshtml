@@ -1,33 +1,45 @@
 ﻿@model FishShopASP.Data.Category
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Нова Категория";
 }
 
-<h1>Create</h1>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="auth2-card shadow-soft border-0">
+                <div class="p-4 border-bottom bg-light text-center rounded-top-4">
+                    <h2 class="fw-bold brand-name mb-1">Добавяне на категория</h2>
+                    <p class="text-muted mb-0">Въведете име за новата продуктова група</p>
+                </div>
 
-<h4>Category</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <div class="auth2-body p-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="mb-4">
+                            <label asp-for="Name" class="form-label fw-bold text-dark">Име на категорията</label>
+                            <input asp-for="Name" class="form-control rounded-pill px-4 shadow-sm" />
+                            <span asp-validation-for="Name" class="text-danger small ms-3"></span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-warning py-2 rounded-pill fw-bold shadow-sm">
+                                <i class="bi bi-plus-circle me-2"></i>Създай категория
+                            </button>
+                            <a asp-action="Index" class="btn btn-outline-secondary py-2 rounded-pill">
+                                Отказ и връщане
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
