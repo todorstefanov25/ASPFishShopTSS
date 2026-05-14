@@ -89,7 +89,7 @@ namespace FishShopASP.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CatalogNumber,Name,Price,CategoryId,Description,imageURL")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CatalogNumber,Name,Price,CategoryId,Description,imageURL,RegOn")] Product product)
         {
             if (id != product.Id)
             {

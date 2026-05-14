@@ -1,0 +1,100 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Профил";
+}
+
+<div class="auth2">
+    <div class="auth2-bg" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+        <span class="grid"></span>
+    </div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                <div class="auth2-card shadow-soft">
+                    <div class="auth2-header">
+                        <div class="brand">
+                            <div class="brand-icon">🐟</div>
+                            <div>
+                                <div class="brand-name">FishShopASP</div>
+                                <div class="brand-sub">Управление на профила</div>
+                            </div>
+                        </div>
+
+                        <a asp-controller="Home" asp-action="Index" asp-area=""
+                           class="btn btn-sm btn-outline-secondary auth2-pill">
+                            Начало
+                        </a>
+                    </div>
+
+                    <div class="auth2-body">
+                        <h1 class="h3 fw-bold mb-1">Моят профил</h1>
+                        <p class="text-muted mb-4">Промени основните си данни.</p>
+
+                        @if (!string.IsNullOrWhiteSpace(Model.StatusMessage))
+                        {
+                            <div class="alert alert-success py-2" role="alert">
+                                @Model.StatusMessage
+                            </div>
+                        }
+
+                        <form id="profile-form" method="post" class="vstack gap-3">
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 mb-0" role="alert"></div>
+
+                            <div class="form-floating">
+                                <input asp-for="Username" class="form-control auth2-input" disabled />
+                                <label asp-for="Username">Потребителско име</label>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input asp-for="Input.FirstName" class="form-control auth2-input" placeholder="Име" />
+                                        <label asp-for="Input.FirstName">Име</label>
+                                        <span asp-validation-for="Input.FirstName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input asp-for="Input.LastName" class="form-control auth2-input" placeholder="Фамилия" />
+                                        <label asp-for="Input.LastName">Фамилия</label>
+                                        <span asp-validation-for="Input.LastName" class="text-danger small"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-floating">
+                                <input asp-for="Input.Email" class="form-control auth2-input" autocomplete="email" placeholder="email@example.com" />
+                                <label asp-for="Input.Email">Имейл</label>
+                                <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                            </div>
+
+                            <div class="form-floating">
+                                <input asp-for="Input.PhoneNumber" class="form-control auth2-input" autocomplete="tel" placeholder="+359..." />
+                                <label asp-for="Input.PhoneNumber">Телефон</label>
+                                <span asp-validation-for="Input.PhoneNumber" class="text-danger small"></span>
+                            </div>
+
+                            <button id="update-profile-button" type="submit" class="btn btn-primary btn-lg w-100 auth2-primary">
+                                Запази промените
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="auth2-note text-center mt-3 text-muted small">
+                    © 2026 FishShopASP
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

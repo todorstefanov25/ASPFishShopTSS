@@ -15,8 +15,8 @@ namespace FishShopASP.Data
         public int CategoryId { get; set; }
         public Category Categories { get; set; }
 
-        public string Description { get; set; }
-        public string imageURL { get; set; }
+        public string? Description { get; set; }
+        public string? imageURL { get; set; }
         [Required]
         public DateTime RegOn { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; }

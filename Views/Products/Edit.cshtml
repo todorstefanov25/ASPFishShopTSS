@@ -70,18 +70,18 @@
 
                             <div class="col-12">
                                 <div class="form-floating mb-4">
-                                    <input asp-for="imageURL" class="form-control auth2-input" placeholder="URL на изображение" />
-                                    <label asp-for="imageURL">URL на изображение</label>
+                                    <input asp-for="imageURL" class="form-control auth2-input" placeholder="https://example.com/image.jpg" />
+                                    <label asp-for="imageURL">Линк към снимка</label>
                                     <span asp-validation-for="imageURL" class="text-danger small"></span>
                                 </div>
                             </div>
 
-                            @if (!string.IsNullOrEmpty(Model.imageURL))
+                            @if (!string.IsNullOrWhiteSpace(Model.imageURL))
                             {
                                 <div class="col-12 mb-4">
                                     <div class="d-flex align-items-center gap-3 p-3 border rounded-3 bg-light">
-                                        <img src="@Model.imageURL" alt="Preview" style="width: 60px; height: 60px; object-fit: cover;" class="rounded shadow-sm">
-                                        <div class="small text-muted">Текущо изображение</div>
+                                        <img src="@Model.imageURL" alt="@Model.Name" style="width: 72px; height: 72px; object-fit: contain;" class="rounded bg-white shadow-sm">
+                                        <div class="small text-muted">Текуща снимка</div>
                                     </div>
                                 </div>
                             }
