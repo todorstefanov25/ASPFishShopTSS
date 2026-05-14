@@ -1,5 +1,35 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\products\baitrunner-reel.jpg
+wwwroot\images\products\baitrunner-reel.svg
+wwwroot\images\products\bolognese-rod.jpg
+wwwroot\images\products\bolognese-rod.svg
+wwwroot\images\products\braided-line.jpg
+wwwroot\images\products\braided-line.svg
+wwwroot\images\products\carp-rod.jpg
+wwwroot\images\products\carp-rod.svg
+wwwroot\images\products\feeder-rig.jpg
+wwwroot\images\products\feeder-rig.svg
+wwwroot\images\products\feeder-rod.jpg
+wwwroot\images\products\feeder-rod.svg
+wwwroot\images\products\hooks-8.jpg
+wwwroot\images\products\hooks-8.svg
+wwwroot\images\products\landing-net.jpg
+wwwroot\images\products\landing-net.svg
+wwwroot\images\products\minnow-wobbler.jpg
+wwwroot\images\products\minnow-wobbler.svg
+wwwroot\images\products\monofilament-line.jpg
+wwwroot\images\products\monofilament-line.svg
+wwwroot\images\products\reel-3000.jpg
+wwwroot\images\products\reel-3000.svg
+wwwroot\images\products\soft-lures.jpg
+wwwroot\images\products\soft-lures.svg
+wwwroot\images\products\spinning-rod.jpg
+wwwroot\images\products\spinning-rod.svg
+wwwroot\images\products\tackle-box.jpg
+wwwroot\images\products\tackle-box.svg
+wwwroot\images\products\telescopic-rod.jpg
+wwwroot\images\products\telescopic-rod.svg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -61,65 +91,80 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\css\site.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\LICENSE.txt
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\favicon.ico
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\js\site.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery-validation\dist\additional-methods.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery-validation\LICENSE.md
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.min.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.min.map
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.slim.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.slim.min.js
-C:\Users\STUDENTS-1212-14\Desktop\Todor 12aaaa\FishShopASP\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.slim.min.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\js\site.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\telescopic-rod.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\tackle-box.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\spinning-rod.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\soft-lures.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\reel-3000.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\monofilament-line.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\minnow-wobbler.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\landing-net.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\hooks-8.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\feeder-rod.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\feeder-rig.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\carp-rod.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\braided-line.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\bolognese-rod.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\images\products\baitrunner-reel.svg
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\favicon.ico
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\css\site.css
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery-validation\dist\additional-methods.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery-validation\LICENSE.md
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.min.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.min.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.slim.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.slim.min.js
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery\dist\jquery.slim.min.map
+C:\Users\Todor\Desktop\ASPFishShopTSS\wwwroot\lib\jquery\LICENSE.txt

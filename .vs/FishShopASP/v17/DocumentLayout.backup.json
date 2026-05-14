@@ -1,9 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\STUDENTS-1212-14\\Downloads\\ASPFishShopTSS-main\\",
+  "WorkspaceRootPath": "C:\\Users\\Todor\\Desktop\\ASPFishShopTSS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\students-1212-14\\downloads\\aspfishshoptss-main\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\todor\\desktop\\aspfishshoptss\\views\\home\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\home\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\todor\\desktop\\aspfishshoptss\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|c:\\users\\todor\\desktop\\aspfishshoptss\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{045BE2B6-78EA-4E5A-AC37-E668D42993C3}|FishShopASP.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -17,16 +25,38 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Todor\\Desktop\\ASPFishShopTSS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Todor\\Desktop\\ASPFishShopTSS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEYAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T12:26:33.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Contacts.cshtml",
+              "DocumentMoniker": "C:\\Users\\Todor\\Desktop\\ASPFishShopTSS\\Views\\Home\\Contacts.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Contacts.cshtml",
+              "ToolTip": "C:\\Users\\Todor\\Desktop\\ASPFishShopTSS\\Views\\Home\\Contacts.cshtml",
+              "RelativeToolTip": "Views\\Home\\Contacts.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T12:25:45.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\STUDENTS-1212-14\\Downloads\\ASPFishShopTSS-main\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "C:\\Users\\Todor\\Desktop\\ASPFishShopTSS\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\STUDENTS-1212-14\\Downloads\\ASPFishShopTSS-main\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Todor\\Desktop\\ASPFishShopTSS\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAJ8BAAAAAAAAAAAYwKcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
